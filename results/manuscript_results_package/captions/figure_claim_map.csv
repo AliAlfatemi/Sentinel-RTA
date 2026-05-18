@@ -1,6 +1,0 @@
-figure_id,claim_supported,source_csv,manuscript_section,claim_strength,notes
-fig2_baseline_comparison,Heuristic baselines expose the service-quality versus attack-leakage trade-off.,results/final_experiment_package/heuristic_baselines_summary.csv,Baseline Defender Comparison,supported,Shows complementary heuristic failure modes.
-fig3_temporal_stress_summary,Temporal Runtime Assurance reduced cumulative SLA violations under stress,results/phase2f_temporal_stress/shield_mode_comparison.csv,Temporal Runtime Assurance Stress Validation,supported,SLA rigidly bounded in simulation.
-fig5_adaptive_leakage_generations,Co-evolution without HoF achieved lower leakage in the benchmark,results/phase3d_coevolution_limited_seed/exp_*/generation_metrics.csv,Adaptive Attacker Evaluation,supported,Shows NoHoF plasticity across 10 generations.
-fig6_hof_ablation,Hall-of-Fame caused optimization interference,results/phase3d_coevolution_limited_seed/robustness_analysis.csv,Hall-of-Fame Replay Ablation,supported,Indicates HoF reduces plasticity.
-fig7_safety_performance_tradeoff,Temporal shielding exposes an attack-leakage trade-off,results/phase3d_coevolution_limited_seed/final_summary.csv,Safety-Performance Trade-off Summary,supported,Maps leakage vs SLA axes.
