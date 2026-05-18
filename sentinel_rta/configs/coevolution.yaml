@@ -1,0 +1,50 @@
+training:
+  generations: 20
+  defender_timesteps_per_generation: 10000
+  attacker_timesteps_per_generation: 5000
+  evaluation_episodes: 5
+  seeds: [1, 2, 3]
+
+hall_of_fame:
+  enabled: true
+  max_size: 10
+  sample_probability: 0.3
+  diversity_threshold: 0.15
+  margin: 0.5
+  admission_mode: diversity_aware
+  reward_margin: 0.05
+  leakage_threshold: 0.60
+  sla_threshold: 10
+  repair_threshold: 25
+
+metrics:
+  sla_budget_rate: 0.05
+
+attacker:
+  policy_type: heuristic_first
+  action_space: discrete
+  objective: stealthy
+  reward_weights:
+    w_leak: 2.0
+    w_sla: 2.0
+    w_cd: 1.0
+    w_repair: 0.5
+    w_cost: 0.2
+    w_obvious: 0.1
+
+defender:
+  use_temporal_shield: true
+  reward_config: C1_temporal
+  reward_weights:
+    w_sq: 1.0
+    w_me: 0.0
+    w_sla: 5.0
+    w_cd: 2.0
+    w_leak: 2.0
+    w_cost: 0.05
+    w_action_change: 0.01
+
+shield:
+  max_drop_without_confidence: 0.1
+  temporal_recovery_max_action: 0.05
+  temporal_enabled: true

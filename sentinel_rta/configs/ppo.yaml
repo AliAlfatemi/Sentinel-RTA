@@ -1,0 +1,23 @@
+# Phase 2: PPO Training Configuration
+# Action Space Documentation: 
+# The environment uses a Continuous Box Action Space: [0.0, 1.0] representing Drop Intensity.
+# PPO natively supports continuous spaces. The baselines and shields also use this scalar format.
+
+training:
+  total_timesteps: 50000
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  ent_coef: 0.01
+
+evaluation:
+  episodes: 10
+  seeds: [1, 2, 3, 4, 5]
+
+env:
+  max_steps: 1000
+  base_legitimate_rate: 0.5
+  sla_threshold: 0.95
+
+shield:
+  max_drop_without_confidence: 0.1
