@@ -1,0 +1,12 @@
+seeds:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+max_steps: 1000
+results_dir: "../results"
+base_legitimate_rate: 0.5
+sla_threshold: 0.95
+shield:
+  max_drop_without_confidence: 0.1
