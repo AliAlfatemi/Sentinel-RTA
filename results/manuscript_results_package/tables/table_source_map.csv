@@ -1,6 +1,0 @@
-table_id,table_name,source_csv,manuscript_section,result_status,notes
-T1,Baseline Comparison,results/final_experiment_package/heuristic_baselines_summary.csv,Baseline Defender Comparison,manuscript_ready,Aggregates heuristic benchmarks.
-T2,Temporal Stress,results/phase2f_temporal_stress/shield_mode_comparison.csv,Temporal Runtime Assurance Stress Validation,manuscript_ready,Shows reduced cumulative SLA violations in the evaluated stress setting.
-T3,Adaptive Attacker,results/phase3d_coevolution_limited_seed/final_summary.csv,Adaptive Attacker Evaluation,extended_preliminary,3 seeds limit variance tracking.
-T4,HoF Ablation,results/phase3d_coevolution_limited_seed/robustness_analysis.csv,Hall-of-Fame Replay Ablation,extended_preliminary,Supports HoF optimization-interference interpretation in the limited-seed benchmark.
-T5,Heldout Generalization,results/phase3d_coevolution_limited_seed/heldout_attacker_evaluation.csv,Held-Out Intra-Simulator Evaluation,extended_preliminary,Evaluates held-out intra-simulator leakage.

@@ -1,4 +1,0 @@
-Check,Status,Value
-Held-out leakage parsed,Pass,"{'Adaptive_NoShield': 0.499516, 'Adaptive_Shield_HoF_pareto_0.1': 0.497917, 'Adaptive_Shield_NoHoF': 0.496157, 'Static_NoShield': 0.499516}"
-HoF negative ablation,Pass,"HoF 0.222, NoHoF 0.371"
-Benchmark label,Pass,limited-seed
