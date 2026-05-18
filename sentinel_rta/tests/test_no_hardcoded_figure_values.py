@@ -2,7 +2,7 @@ import os
 import pytest
 
 def test_no_hardcoded_figure_values():
-    script_path = "scripts/generate_manuscript_result_figures.py"
+    script_path = "sentinel_rta/scripts/generate_manuscript_result_figures.py"
     with open(script_path, 'r') as f:
         content = f.read()
         

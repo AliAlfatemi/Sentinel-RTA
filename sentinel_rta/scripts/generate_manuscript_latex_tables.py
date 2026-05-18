@@ -76,13 +76,13 @@ try:
     # Table 3: Adaptive Attacker
     grouped3 = df_coev.groupby('Experiment').agg(['mean', 'std'])
     formatted3 = pd.DataFrame()
-    formatted3['Method (Extended Preliminary)'] = grouped3.index
+    formatted3['Method (Limited-seed)'] = grouped3.index
     formatted3['Service Quality $\\uparrow$'] = grouped3['Final_SQ_Mean'].apply(format_mean_std, axis=1).values
     formatted3['Attack Leakage $\\downarrow$'] = grouped3['Final_Leakage_Mean'].apply(format_mean_std, axis=1).values
     formatted3['SLA Violations $\\downarrow$'] = grouped3['sla_violation_count'].apply(format_mean_std, axis=1).values
     formatted3['Shield Repairs'] = grouped3['Final_Shield_Repairs'].apply(format_mean_std, axis=1).values
     
-    tex3 = f"% Source: {src3}\n% Note: Extended-preliminary aggregate; seed-level dispersion unavailable for some rows.\n" + formatted3.to_latex(index=False, escape=False)
+    tex3 = f"% Source: {src3}\n% Note: Limited-seed aggregate; seed-level dispersion unavailable for some rows.\n" + formatted3.to_latex(index=False, escape=False)
     with open(os.path.join(out_dir, 'table3_adaptive_attacker.tex'), 'w') as f:
         f.write(tex3)
         
@@ -101,7 +101,7 @@ try:
     df_merged['Experiment'] = df_merged['Experiment'].apply(clean_name)
     
     formatted4 = pd.DataFrame()
-    formatted4['Method (Extended Preliminary)'] = df_merged['Experiment']
+    formatted4['Method (Limited-seed)'] = df_merged['Experiment']
     formatted4['Robustness Score $\\uparrow$'] = df_merged['Robustness_Score'].apply(lambda x: f"{x:.3f}")
     formatted4['Forgetting Score $\\downarrow$'] = df_merged['Forgetting_Score'].apply(lambda x: f"{x:.3f}")
     
@@ -121,7 +121,7 @@ try:
     
     grouped5 = df_held.groupby('Experiment').agg(['mean', 'std'])
     formatted5 = pd.DataFrame()
-    formatted5['Method (Extended Preliminary)'] = grouped5.index
+    formatted5['Method (Limited-seed)'] = grouped5.index
     formatted5['Heldout Leakage $\\downarrow$'] = grouped5['Heldout_Leakage'].apply(lambda x: f"{x['mean']:.3f} $\\pm$ {x['std']:.3f}", axis=1).values
     
     tex5 = f"% Source: {src5}\n" + formatted5.to_latex(index=False, escape=False)

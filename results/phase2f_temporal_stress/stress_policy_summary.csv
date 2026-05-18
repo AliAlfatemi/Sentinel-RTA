@@ -1,0 +1,16 @@
+policy_name,shield_mode,cumulative_sla_violation_count,temporal_shield_repair_count
+Aggressive Stress Policy,Instantaneous Runtime Shield,20.0,0.0
+Aggressive Stress Policy,No Shield,25.0,0.0
+Aggressive Stress Policy,Temporal Runtime Shield,1.6,1630.8
+Bursty Near-Limit Stress Policy,Instantaneous Runtime Shield,0.0,0.0
+Bursty Near-Limit Stress Policy,No Shield,0.0,0.0
+Bursty Near-Limit Stress Policy,Temporal Runtime Shield,0.0,0.0
+Edge-Riding Stress Policy,Instantaneous Runtime Shield,0.0,0.0
+Edge-Riding Stress Policy,No Shield,0.0,0.0
+Edge-Riding Stress Policy,Temporal Runtime Shield,0.0,0.0
+PPO C1 Policy,Instantaneous Runtime Shield,15.0,0.0
+PPO C1 Policy,No Shield,15.0,0.0
+PPO C1 Policy,Temporal Runtime Shield,1.2,1073.2
+Sustained Moderate Stress Policy,Instantaneous Runtime Shield,0.0,0.0
+Sustained Moderate Stress Policy,No Shield,0.0,0.0
+Sustained Moderate Stress Policy,Temporal Runtime Shield,0.0,0.0

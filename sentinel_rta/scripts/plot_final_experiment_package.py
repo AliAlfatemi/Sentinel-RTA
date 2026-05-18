@@ -13,7 +13,7 @@ def plot_final_metrics(results_dir):
     
     # Load Co-evolution results
     # For a real run we'd load final_summary.csv from phase3d. We'll simulate reading the archived one.
-    archive_dir = 'results/final_evidence_archive/phase3d_coevolution_extended_preliminary'
+    archive_dir = 'results/final_evidence_archive/phase3d_coevolution_limited_seed'
     df_coev = pd.read_csv(os.path.join(archive_dir, 'final_summary.csv'))
     df_coev['Source'] = 'CoEvolution'
     

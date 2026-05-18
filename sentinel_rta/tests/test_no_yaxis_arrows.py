@@ -1,7 +1,7 @@
 import os
 
 def test_no_yaxis_arrows():
-    with open("scripts/generate_manuscript_result_figures.py", "r") as f:
+    with open("sentinel_rta/scripts/generate_manuscript_result_figures.py", "r") as f:
         content = f.read()
     
     assert "ylabel('Service Quality $\\uparrow$')" not in content

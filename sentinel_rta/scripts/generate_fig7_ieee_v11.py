@@ -200,7 +200,7 @@ for ax in axes:
     ax.set_xlim(left=-0.0002)
 
 fig.tight_layout()
-fig.savefig("results/manuscript_results_package/figures/fig7_safety_performance_tradeoff_final_ieee_v11.pdf", format="pdf", bbox_inches="tight")
+fig.savefig("results/manuscript_results_package/figures/fig7_safety_performance_tradeoff.pdf", format="pdf", bbox_inches="tight")
 plt.close(fig)
 
 print("Figure generated successfully.")

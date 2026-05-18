@@ -1,9 +1,11 @@
+import pytest
 import os
 import sys
 import subprocess
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+@pytest.mark.expensive
 def test_ppo_train_smoke():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     train_script = os.path.join(base_dir, "..", "scripts", "train_ppo.py")

@@ -131,7 +131,7 @@ except Exception as e:
 # Figure 5: Adaptive Leakage Generations
 # ==========================================
 try:
-    gen_files = glob.glob("results/final_evidence_archive/phase3d_coevolution_extended_preliminary/exp_*/generation_metrics.csv")
+    gen_files = glob.glob("results/manuscript_results_package/source_csv/phase3d_generation_metrics/exp_*/generation_metrics.csv")
     if gen_files:
         gen_data = []
         for gf in gen_files:

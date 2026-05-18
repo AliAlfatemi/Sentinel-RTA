@@ -1,0 +1,6 @@
+Comparison,Metric,P_Value,Effect_Size,Significant
+HoF vs NoHoF,Robustness_Score,0.7,0.33333333333333337,False
+HoF vs NoHoF,Forgetting_Score,0.1,-1.0,False
+HoF vs NoHoF,Heldout_Leakage,0.4,-0.5555555555555556,False
+Shield vs NoShield,Final_Leakage_Mean,0.1,1.0,False
+Shield vs NoShield,SLA_Violations,0.16415972847851523,-0.7777777777777777,False

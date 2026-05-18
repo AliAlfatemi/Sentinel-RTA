@@ -1,0 +1,3 @@
+generation,average_attacker_reward,average_attack_leakage,average_sla_violations,attack_type_distribution,attacker_id,archive_reason,diversity_score_to_archive
+1,0.49452200680077074,0.6711420160889625,32.2,"[0.5396, 0.1652, 0.2348, 0.0604, 0]",10c90345,pareto_nondominated,0.0
+0,0.49213780587017536,0.6669778158634901,33.8,"[0.532, 0.158, 0.2492, 0.0608, 0]",d40e673b,pareto_nondominated,1.0

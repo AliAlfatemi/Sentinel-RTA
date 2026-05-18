@@ -1,0 +1,33 @@
+\begin{table*}[htbp]
+\centering
+\caption{Phase 2F: Temporal Shield Stress Validation Across All Scenarios}
+\label{tab:phase2f_stress}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l l cccc}
+\toprule
+Policy & Shield Mode & Cumul. SLA Violations & Temp. Repairs & Attack Leakage & Latency (ms) \\
+\midrule
+Aggressive Stress Policy & Instantaneous Runtime Shield & 20.0 $\pm$ 10.0 & 0.0 $\pm$ 0.0 & 0.105 $\pm$ 0.086 & 0.016 $\pm$ 0.001 \\
+Aggressive Stress Policy & No Shield & 25.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.105 $\pm$ 0.085 & 0.015 $\pm$ 0.001 \\
+Aggressive Stress Policy & Temporal Runtime Shield & 1.6 $\pm$ 0.8 & 1630.8 $\pm$ 1120.0 & 0.492 $\pm$ 0.402 & 0.016 $\pm$ 0.001 \\
+\midrule
+Bursty Near-Limit Stress Policy & Instantaneous Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.527 $\pm$ 0.430 & 0.015 $\pm$ 0.001 \\
+Bursty Near-Limit Stress Policy & No Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.527 $\pm$ 0.430 & 0.014 $\pm$ 0.001 \\
+Bursty Near-Limit Stress Policy & Temporal Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.527 $\pm$ 0.430 & 0.016 $\pm$ 0.002 \\
+\midrule
+Edge-Riding Stress Policy & Instantaneous Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.503 $\pm$ 0.411 & 0.015 $\pm$ 0.001 \\
+Edge-Riding Stress Policy & No Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.503 $\pm$ 0.411 & 0.014 $\pm$ 0.001 \\
+Edge-Riding Stress Policy & Temporal Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.503 $\pm$ 0.411 & 0.017 $\pm$ 0.004 \\
+\midrule
+PPO C1 Policy & Instantaneous Runtime Shield & 15.0 $\pm$ 12.2 & 0.0 $\pm$ 0.0 & 0.246 $\pm$ 0.359 & 0.128 $\pm$ 0.031 \\
+PPO C1 Policy & No Shield & 15.0 $\pm$ 12.2 & 0.0 $\pm$ 0.0 & 0.246 $\pm$ 0.359 & 0.117 $\pm$ 0.006 \\
+PPO C1 Policy & Temporal Runtime Shield & 1.2 $\pm$ 1.0 & 1073.2 $\pm$ 1163.2 & 0.512 $\pm$ 0.421 & 0.118 $\pm$ 0.010 \\
+\midrule
+Sustained Moderate Stress Policy & Instantaneous Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.510 $\pm$ 0.417 & 0.015 $\pm$ 0.001 \\
+Sustained Moderate Stress Policy & No Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.510 $\pm$ 0.417 & 0.014 $\pm$ 0.001 \\
+Sustained Moderate Stress Policy & Temporal Runtime Shield & 0.0 $\pm$ 0.0 & 0.0 $\pm$ 0.0 & 0.510 $\pm$ 0.417 & 0.017 $\pm$ 0.005 \\
+\midrule
+\bottomrule
+\end{tabular}
+}
+\end{table*}

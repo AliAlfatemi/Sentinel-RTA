@@ -1,7 +1,9 @@
+import pytest
 import sys
 import os
 import subprocess
 
+@pytest.mark.expensive
 def test_phase2f_stress_smoke():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     stress_script = os.path.join(base_dir, "..", "scripts", "run_temporal_shield_stress.py")

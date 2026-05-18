@@ -14,7 +14,7 @@ def test_table4_no_duplicate_rows():
     for line in content:
         if "&" in line and not line.strip().startswith('%') and not line.strip().startswith('\\'):
             method = line.split("&")[0].strip()
-            if method and method != "Method (Extended Preliminary)":
+            if method and method != "Method (Limited-seed)":
                 methods.append(method)
                 
     # Check for duplicates

@@ -1,0 +1,9 @@
+Experiment,Seed,Forgetting_Score
+Static_NoShield,1,0.3026255642716249
+Static_NoShield,2,0.2744220965830485
+Adaptive_Shield_NoHoF,1,-0.01160643356045088
+Adaptive_Shield_NoHoF,2,0.03399796684583034
+Adaptive_NoShield,1,0.3003551886075895
+Adaptive_NoShield,2,0.277694207482338
+Adaptive_Shield_HoF_pareto_0.05,1,0.005096548120180677
+Adaptive_Shield_HoF_pareto_0.05,2,0.0076812905917565955

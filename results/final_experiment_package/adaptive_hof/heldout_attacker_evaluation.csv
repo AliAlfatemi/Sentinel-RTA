@@ -1,0 +1,9 @@
+Experiment,Seed,Heldout_Leakage
+Static_NoShield,1,0.4927579367955526
+Static_NoShield,2,0.4936503923734029
+Adaptive_Shield_NoHoF,1,0.45858313123385114
+Adaptive_Shield_NoHoF,2,0.46784444638093314
+Adaptive_NoShield,1,0.4927579367955526
+Adaptive_NoShield,2,0.4936503923734029
+Adaptive_Shield_HoF_pareto_0.05,1,0.46449001963933306
+Adaptive_Shield_HoF_pareto_0.05,2,0.461981555779775

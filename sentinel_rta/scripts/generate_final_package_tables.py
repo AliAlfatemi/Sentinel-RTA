@@ -25,7 +25,7 @@ except Exception as e:
 
 # Table 3 & 4 & 5
 # We can just write placeholder latex referencing the coevolution summary 
-archive_dir = 'results/final_evidence_archive/phase3d_coevolution_extended_preliminary'
+archive_dir = 'results/final_evidence_archive/phase3d_coevolution_limited_seed'
 try:
     df_coev = pd.read_csv(os.path.join(archive_dir, 'final_summary.csv'))
     

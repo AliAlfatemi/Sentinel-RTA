@@ -55,7 +55,7 @@ class RTAShield:
             
             # If rolling SQ drops below SLA threshold, tighten the max action
             if rolling_sq < 0.95 or rolling_sla_rate > 0.05:
-                # Strict temporal bounding to guarantee SLA recovery
+                # Strict temporal bounding to reduce SLA-risk under configured simulator rules
                 # If SLA is at risk, we limit the drop intensity to a safe threshold
                 temp_max_action = self.temporal_recovery_max_action
                 dynamic_max_action = min(dynamic_max_action, temp_max_action)

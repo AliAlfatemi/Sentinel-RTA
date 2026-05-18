@@ -21,16 +21,16 @@ PPO\_C1 & Temporal & 0.992 & 0.552 & 17.8 & 39.4 & 11.5 \\
 with open(os.path.join(archive_dir, 'table_phase2_temporal_stress.tex'), 'w') as f:
     f.write(t1)
 
-# Table 2: Phase 3D co-evolution extended preliminary results
+# Table 2: Phase 3D co-evolution limited-seed results
 try:
-    df_3d = pd.read_csv(os.path.join(archive_dir, 'phase3d_coevolution_extended_preliminary', 'final_summary.csv'))
+    df_3d = pd.read_csv(os.path.join(archive_dir, 'phase3d_coevolution_limited_seed', 'final_summary.csv'))
     # Extract needed columns
     df_3d_sub = df_3d[['Experiment', 'Final_SQ_Mean', 'Final_Leakage_Mean', 'sla_violation_count', 'sla_norm', 'Final_Shield_Repairs', 'Robustness_Score', 'Forgetting_Score']]
     # Rename columns for LaTeX
     df_3d_sub.columns = ['Method', 'Service Quality', 'Attack Leakage', 'SLA Count', 'SLA Norm', 'Shield Repairs', 'Robustness Score', 'Forgetting Score']
     
     # Add heldout leakage
-    df_held = pd.read_csv(os.path.join(archive_dir, 'phase3d_coevolution_extended_preliminary', 'heldout_attacker_evaluation.csv'))
+    df_held = pd.read_csv(os.path.join(archive_dir, 'phase3d_coevolution_limited_seed', 'heldout_attacker_evaluation.csv'))
     df_held_mean = df_held.groupby('Experiment')['Heldout_Leakage'].mean().reset_index()
     
     df_merged = pd.merge(df_3d_sub, df_held_mean, left_on='Method', right_on='Experiment', how='left')
