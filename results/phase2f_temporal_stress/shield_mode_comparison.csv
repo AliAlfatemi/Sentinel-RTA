@@ -1,4 +1,0 @@
-shield_mode,cumulative_sla_violation_count,temporal_shield_repair_count,instantaneous_shield_repair_count,attack_leakage,latency_mean_ms
-Instantaneous Runtime Shield,7.0,0.0,246.24,0.3781559001025558,0.03783695167046967
-No Shield,8.0,0.0,0.0,0.37806950011124213,0.03489674885388614
-Temporal Runtime Shield,0.56,540.8,246.24,0.508821270942986,0.036911860016213376

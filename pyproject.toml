@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-rta"
+version = "0.1.0"
+description = "Simulator-based runtime-assurance artifact for safe RL-based DDoS mitigation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Ali Alfatemi"},
+  {name = "Ahmed Alfaqeer"},
+  {name = "Mohamed Rahouti"},
+  {name = "Zakirul Alam Bhuiyan"},
+  {name = "Abdellah Chehri"}
+]
+dependencies = [
+  "numpy>=1.24.0",
+  "pandas>=2.0.0",
+  "matplotlib>=3.7.0",
+  "scipy>=1.10.0",
+  "pytest>=7.0.0",
+  "gymnasium>=0.29.0",
+  "stable-baselines3>=2.0.0",
+  "torch>=2.0.0",
+  "PyYAML>=6.0",
+  "Jinja2>=3.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["sentinel_rta/tests"]
+addopts = "-q -ra -m 'not expensive'"
+markers = ["expensive: long-running training or experiment smoke tests"]

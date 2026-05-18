@@ -1,8 +1,0 @@
-policy_name,shield_mode,scenario,temporal_shield_repair_count,cumulative_sla_violation_count
-Aggressive Stress Policy,Temporal Runtime Shield,flash_crowd,555,2
-Aggressive Stress Policy,Temporal Runtime Shield,long_sustained_attack,2487,2
-Aggressive Stress Policy,Temporal Runtime Shield,low_and_slow,2625,2
-Aggressive Stress Policy,Temporal Runtime Shield,mixed_attack_shift,2487,2
-PPO C1 Policy,Temporal Runtime Shield,flash_crowd,392,2
-PPO C1 Policy,Temporal Runtime Shield,long_sustained_attack,2487,2
-PPO C1 Policy,Temporal Runtime Shield,mixed_attack_shift,2487,2

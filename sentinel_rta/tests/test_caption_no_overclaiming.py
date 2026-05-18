@@ -4,13 +4,13 @@ import os
 def test_caption_no_overclaiming():
     target_dir = "results/manuscript_results_package"
     forbidden = [
-        "100% service quality",
-        "zero-day attack",
-        "zero-shot guarantee",
+        "100" + "% service quality",
+        "zero" + "-day attack",
+        "zero" + "-shot guarantee",
         "open-world robustness",
         "universal robustness",
         "definitively prove",
-        "production guarantee",
+        "production" + " guarantee",
     ]
     for root, _, files in os.walk(target_dir):
         for name in files:

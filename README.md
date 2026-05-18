@@ -2,9 +2,9 @@
 
 Sentinel-RTA is a simulator-based research artifact for the revised manuscript **“Sentinel-RTA: Temporal Runtime Assurance for Safe Reinforcement-Learning-Based DDoS Mitigation under Adaptive Attackers.”**
 
-The repository contains a Gymnasium-compatible DDoS mitigation simulator, PPO-based defender components, instantaneous and temporal runtime-assurance shields, adaptive-attacker evaluation utilities, curated result CSVs, and figure/table generation scripts. It is intended for simulator-based reproducibility only. It does **not** provide live-network attack tooling, operational DDoS traffic generators, or deployment-ready enforcement code.
+The repository contains a Gymnasium-compatible DDoS mitigation simulator, PPO-based defender components, instantaneous and temporal runtime-assurance shields, adaptive-attacker evaluation utilities, curated result CSVs, and scripts for regenerating the manuscript figures and tables. It is intended for simulator-based reproducibility only. It does **not** provide live-network attack tooling, operational DDoS traffic generators, or deployment-ready enforcement code.
 
-## Structure
+## Repository structure
 
 ```text
 sentinel_rta/
@@ -18,10 +18,14 @@ sentinel_rta/
   tests/        automated tests and reproducibility checks
   training/     co-evolution training utilities
 results/
-  manuscript_results_package/  source CSVs, generated tables, figures, and audits
-  final_experiment_package/    baseline/final-package outputs
-  phase2f_temporal_stress/     temporal RTA stress-validation outputs
-  phase3d_coevolution_limited_seed/  limited-seed adaptive-attacker outputs
+  manuscript_results_package/
+    source_csv/ curated CSV files used for reported tables and figures
+    figures/    generated manuscript figures
+    tables/     generated LaTeX tables
+    audits/     consistency and missing-file audit outputs
+    captions/   figure-caption and claim-map files
+docs/
+  REPRODUCIBILITY.md
 ```
 
 ## Installation
@@ -32,7 +36,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The artifact was prepared with Python 3.13 in the validation environment, but it is intended to run on Python 3.10 or newer.
+
 ## Quick validation
+
+Run these commands from the repository root:
 
 ```bash
 python -m compileall -q sentinel_rta
@@ -41,7 +49,7 @@ python sentinel_rta/scripts/audit_missing_files.py
 python sentinel_rta/scripts/audit_result_consistency.py
 ```
 
-The default pytest configuration excludes long-running training smoke tests. To run expensive tests, use:
+The default pytest configuration excludes long-running training smoke tests. To include long-running tests, use:
 
 ```bash
 pytest -q -m expensive
@@ -55,16 +63,16 @@ python sentinel_rta/scripts/generate_fig7_ieee_v11.py
 python sentinel_rta/scripts/generate_manuscript_latex_tables.py
 ```
 
-The scripts use curated CSV files in `results/manuscript_results_package/source_csv/` and write outputs to `results/manuscript_results_package/figures/` and `results/manuscript_results_package/tables/`.
+The scripts read curated CSV files from `results/manuscript_results_package/source_csv/` and write outputs to `results/manuscript_results_package/figures/` and `results/manuscript_results_package/tables/`.
 
 ## Scope and ethics
 
-This artifact is for defensive, simulator-based research. It must not be used to generate unauthorized traffic or to test third-party systems. The reported results are bounded to the modeled simulator configuration and should not be interpreted as live-network deployment evidence.
+This artifact is for defensive, simulator-based research. It must not be used to generate unauthorized traffic or test third-party systems. The reported results are bounded to the modeled simulator configuration and should not be interpreted as live-network deployment evidence.
 
 ## Manuscript code-availability text
 
 ```latex
-\noindent\textbf{Code Availability:} The simulator, runtime-assurance shields, evaluation scripts, curated result CSVs, and reproducibility artifacts are available at \url{https://github.com/AliAlfatemi/Sentinel-RTA}. The repository is intended for simulator-based reproducibility only and does not provide live-network attack or deployment tools.
+\noindent\textbf{Code Availability:} The Sentinel-RTA simulator, runtime-assurance shields, evaluation scripts, curated result CSVs, and reproducibility artifacts are publicly available at \url{https://github.com/AliAlfatemi/Sentinel-RTA}. The repository is intended for simulator-based reproducibility only and does not provide live-network attack or deployment tools.
 ```
 
 ## Citation
